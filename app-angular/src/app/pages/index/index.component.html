@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Proyecto del Equipo 2</h1>
+    <div class="card-grid">
+        <div class="card" *ngFor="let integrante of integrantes">
+        <h2>{{ integrante.nombre }}</h2>
+        <p>{{ integrante.descripcion }}</p>
+        <a [routerLink]="[integrante.ruta]" class="btn">Ver página</a>
+        </div>
+    </div>
+</div>
