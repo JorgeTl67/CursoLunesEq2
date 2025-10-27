@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-felix',
-  imports: [],
+  standalone: true,
   templateUrl: './felix.component.html',
-  styleUrl: './felix.component.scss'
+  styleUrls: ['./felix.component.css']
 })
 export class FelixComponent {
-
+  titulo = 'Sobre mí';
 }
