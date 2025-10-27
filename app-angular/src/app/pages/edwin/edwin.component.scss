@@ -1,0 +1,66 @@
+.presentacion {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #1e1e2f, #0d0d16);
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.tarjeta {
+    background: linear-gradient(135deg, #2b2b44, #1f1f35);
+    color: #fff;
+    width: 400px;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: 0 0 40px rgba(0, 255, 200, 0.4);
+    }
+
+    .contenido {
+        position: relative;
+        z-index: 2;
+
+        .titulo {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+
+        span {
+            color: #00ffc8;
+            text-shadow: 0 0 10px #00ffc8;
+        }
+        }
+
+        .subtitulo {
+        font-size: 1.2rem;
+        color: #b8b8ff;
+        margin-bottom: 1rem;
+        }
+
+        .hobbie {
+        font-size: 1rem;
+        opacity: 0.9;
+        }
+    }
+
+    .brillo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120%;
+        height: 120%;
+        background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0, 255, 200, 0.2), transparent 40%);
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
