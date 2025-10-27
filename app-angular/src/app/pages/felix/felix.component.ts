@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class FelixComponent {
 
+  standalone: true,
+  templateUrl: './felix.component.html',
+  styleUrls: ['./felix.component.css']
+})
+export class FelixComponent {
+  titulo = 'Sobre mí';
 }

@@ -18,4 +18,13 @@ export class IndexComponent {
     { nombre: 'Persona5', descripcion: 'Página de Persona5: Descripción de la página.', ruta: '/persona5' },
     { nombre: 'Persona6', descripcion: 'Página de Persona6: Descripción de la página.', ruta: '/persona6' },
   ];
+
+@Component({
+  selector: 'app-index',
+  imports: [],
+  templateUrl: './index.component.html',
+  styleUrl: './index.component.scss'
+})
+export class IndexComponent {
+
 }
