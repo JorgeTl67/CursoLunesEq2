@@ -1,29 +1,28 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { JorgeComponent } from './jorge.component';
 
-describe('AppComponent', () => {
+describe('JorgeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [JorgeComponent],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should create', () => {
+    const fixture = TestBed.createComponent(JorgeComponent);
+    const component = fixture.componentInstance;
+    expect(component).toBeTruthy();
   });
 
-  it(`should have the 'app-angular' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('app-angular');
+  it('should have titulo property', () => {
+    const fixture = TestBed.createComponent(JorgeComponent);
+    const component = fixture.componentInstance;
+    expect(component.titulo).toEqual('Jorge Humberto Torres Luna');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, app-angular');
+  it('should have imagenSoldado property', () => {
+    const fixture = TestBed.createComponent(JorgeComponent);
+    const component = fixture.componentInstance;
+    expect(component.imagenSoldado).toEqual('assets/Soldado.jpg');
   });
 });

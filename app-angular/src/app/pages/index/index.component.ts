@@ -13,31 +13,37 @@ export class IndexComponent {
   integrantes = [
     { 
       nombre: 'Edwin',  
+      descripcion: '',
       ruta: '/edwin',
       especialidad: 'Frontend'
     },
     { 
       nombre: 'Jorge', 
+      descripcion: '',
       ruta: '/jorge',
       especialidad: 'Full-Stack'
     },
     { 
       nombre: 'Andrea', 
+      descripcion: '',
       ruta: '/andrea',
       especialidad: 'UX/UI'
     },
     { 
-      nombre: 'Felix', 
+      nombre: 'Felix',
+      descripcion: '', 
       ruta: '/felix',
       especialidad: 'Backend'
     },
     { 
-      nombre: 'Persona5', 
+      nombre: 'Persona5',
+      descripcion: '',
       ruta: '/persona5',
       especialidad: 'DevOps'
     },
     { 
       nombre: 'Persona6', 
+      descripcion: '',
       ruta: '/persona6',
       especialidad: ''
     },

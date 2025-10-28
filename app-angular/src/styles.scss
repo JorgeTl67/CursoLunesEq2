@@ -9,17 +9,30 @@
 html, body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow-x: hidden;
+  background: #f5f5f5; 
 }
 
 body {
   font-family: 'Arial', sans-serif;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 app-root {
   display: block;
-  min-height: 100vh;
+  width: 100%;
+}
+
+// Reset para componentes individuales
+router-outlet + * {
+  display: block;
+  width: 100%;
+}
+
+// Optimización para todas las páginas
+app-index, app-jorge, app-edwin, app-andrea, app-felix, app-persona5, app-persona6 {
+  display: block;
   width: 100%;
 }
