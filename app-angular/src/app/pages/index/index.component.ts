@@ -11,20 +11,54 @@ import { RouterModule } from '@angular/router';
 })
 export class IndexComponent {
   integrantes = [
-    { nombre: 'Edwin', descripcion: 'Página de Edwin: Desarrollo con Angular.', ruta: '/edwin' },
-    { nombre: 'Jorge', descripcion: 'Página de Jorge: Descripción de la página.', ruta: '/jorge' },
-    { nombre: 'Andrea', descripcion: 'Página de Andrea: Descripción de la página.', ruta: '/andrea' },
-    { nombre: 'Felix', descripcion: 'Página de Felix: Descripción de la página.', ruta: '/felix' },
-    { nombre: 'Persona5', descripcion: 'Página de Persona5: Descripción de la página.', ruta: '/persona5' },
-    { nombre: 'Persona6', descripcion: 'Página de Persona6: Descripción de la página.', ruta: '/persona6' },
+    { 
+      nombre: 'Edwin',  
+      descripcion: '',
+      ruta: '/edwin',
+      especialidad: 'Frontend'
+    },
+    { 
+      nombre: 'Jorge', 
+      descripcion: '',
+      ruta: '/jorge',
+      especialidad: 'Full-Stack'
+    },
+    { 
+      nombre: 'Andrea', 
+      descripcion: '',
+      ruta: '/andrea',
+      especialidad: 'UX/UI'
+    },
+    { 
+      nombre: 'Felix',
+      descripcion: '', 
+      ruta: '/felix',
+      especialidad: 'Backend'
+    },
+    { 
+      nombre: 'Persona5',
+      descripcion: '',
+      ruta: '/persona5',
+      especialidad: 'DevOps'
+    },
+    { 
+      nombre: 'Persona6', 
+      descripcion: '',
+      ruta: '/persona6',
+      especialidad: ''
+    },
   ];
 
-@Component({
-  selector: 'app-index',
-  imports: [],
-  templateUrl: './index.component.html',
-  styleUrl: './index.component.scss'
-})
-export class IndexComponent {
+  avatarColors = [
+    'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
+  ];
 
+  getAvatarColor(index: number): string {
+    return this.avatarColors[index % this.avatarColors.length];
+  }
 }

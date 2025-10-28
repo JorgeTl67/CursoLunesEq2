@@ -1,23 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { JorgeComponent } from './jorge.component';
 
 describe('JorgeComponent', () => {
-  let component: JorgeComponent;
-  let fixture: ComponentFixture<JorgeComponent>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JorgeComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(JorgeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+      imports: [JorgeComponent],
+    }).compileComponents();
   });
 
   it('should create', () => {
+    const fixture = TestBed.createComponent(JorgeComponent);
+    const component = fixture.componentInstance;
     expect(component).toBeTruthy();
+  });
+
+  it('should have titulo property', () => {
+    const fixture = TestBed.createComponent(JorgeComponent);
+    const component = fixture.componentInstance;
+    expect(component.titulo).toEqual('Jorge Humberto Torres Luna');
+  });
+
+  it('should have imagenSoldado property', () => {
+    const fixture = TestBed.createComponent(JorgeComponent);
+    const component = fixture.componentInstance;
+    expect(component.imagenSoldado).toEqual('assets/Soldado.jpg');
   });
 });
