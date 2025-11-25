@@ -1,1 +1,11 @@
-<p>andrea works!</p>
+<div class="terminal" id="terminal">
+	<div class="scanline"></div>
+	<div class="header">
+		<h2 class="glitch" data-text="ANDREA VÁZQUEZ FLORES">ANDREA VÁZQUEZ FLORES</h2>
+	</div>
+	<div *ngFor="let item of comandos" class="info-line">
+		<span class="prompt">C:\USERS\ANDREA&gt;</span>
+		<span class="command">{{ item.comando }}</span>
+		<span class="response">{{ item.respuesta }}</span>
+	</div>
+</div>

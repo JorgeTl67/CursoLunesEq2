@@ -25,7 +25,7 @@ export class IndexComponent {
     },
     { 
       nombre: 'Andrea', 
-      descripcion: '',
+      descripcion: 'Desarrollo de Software - Área Multiplataforma',
       ruta: '/andrea',
       especialidad: 'UX/UI'
     },
