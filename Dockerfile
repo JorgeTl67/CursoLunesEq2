@@ -2,7 +2,7 @@
 FROM node:18-alpine AS builder
 RUN apk add --no-cache git
 WORKDIR /app
-RUN git clone https://github.com/JorgeTl67/CursoLunesEq2.git .
+RUN git clone --branch main https://github.com/JorgeTl67/CursoLunesEq2.git .
 WORKDIR /app/app-angular
 RUN npm ci
 RUN npm run build
