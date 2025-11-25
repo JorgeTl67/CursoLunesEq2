@@ -1,0 +1,26 @@
+services:
+  # Servicio para construir la aplicación Angular
+  angular-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - dist-volume:/dist
+    command: /bin/true  
+
+  # Servicio del servidor HTTP Nginx
+  web-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - dist-volume:/usr/share/nginx/html
+    depends_on:
+      - angular-builder
+    restart: unless-stopped
+    command: sh -c "cp /usr/share/nginx/html/browser/* /usr/share/nginx/html/ 2>/dev/null || true && nginx -g 'daemon off;'"
+
+volumes:
+  dist-volume:
