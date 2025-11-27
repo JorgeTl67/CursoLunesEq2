@@ -1,0 +1,28 @@
+<div class="terminal" id="terminal">
+  <div class="scanline"></div>
+
+  <div class="header">
+    <h2 class="glitch" data-text="ANDREA VÁZQUEZ FLORES">
+      ANDREA VÁZQUEZ FLORES
+    </h2>
+  </div>
+
+  <!-- Líneas que se van “escribiendo” -->
+  <div class="content">
+    <div *ngFor="let line of lines" class="info-line">
+      <ng-container [ngSwitch]="line.type">
+        <ng-container *ngSwitchCase="'command'">
+          <span class="prompt">C:\USERS\ANDREA&gt;</span>
+          <span class="command">{{ line.text }}</span>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'response'">
+          <span class="response">{{ line.text }}</span>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Si tenías un footer, lo puedes agregar aquí -->
+  <!-- <div class="footer">...</div> -->
+</div>
